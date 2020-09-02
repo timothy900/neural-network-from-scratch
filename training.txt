@@ -1,0 +1,38 @@
+How I will train the network:
+	The network gets a better accuracy score when the network's loss is minimized.
+	The network's loss, aslo called cost is how innacurately it classifies the examples.
+	The loss is a function of the weights and biases. That means, in order to minimize the
+	loss, the weights and biases need to be changed accordingly.
+
+How to minimize the cost / change the weights and biases:
+	We will use an algorithm called stochastic gradient descent:
+	Each step:
+		- Compute the negative gradient of the cost function(using backpropagation)
+		- Update the weights and biases according to the negative gradient
+
+	*BACKPROPAGATION
+	To compute the negative gradient:
+		For each training example in a small batch of all the examples:
+			# each example's desired weight change = []
+			Propagate backwards through the network to know how to change the weights and biases:
+				# each neuron's desired weight change = []
+				# take the cost of every neuron with respect to that neuron's expected output
+				# for each neuron(L): (we already have each neuron's desired change at this point)
+					# for each neuron(L-1) in the previous layer:
+						# the higher the neuron(L-1)'s activation, the higher its desired change is
+						# add this neuron's desired change to the list of changes
+				# add each neuron's desired weight change to the list of all example's desired weight change
+				# propagate(the above same process) on the previous layer recursively
+		# average every example's desired weight change
+
+		The gradient is the average of all the needed changes to the parameters by every example
+
+	Update the parameters of the cost function(the weights and biases):
+		**Multiply the gradient by a negative learning rate
+
+	**NEEDS MORE RESEARCH/STUDY:**
+		First, we need to choose a batch size for each step.
+		Then, we pick that(the batch size) amount of examples from the training data.
+		For each training example in the batch:
+			Compute the negative gradient of the cost function
+

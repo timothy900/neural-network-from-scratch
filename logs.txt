@@ -1,0 +1,30 @@
+Updates on my neural network
+Started on May 16
+
+To do:
+	Backpropagation
+	Stochastic GD
+	Import MNIST Data(Handwritten digits)
+	Feedforward MNIST Data
+	Train on MNIST Data
+	Correctly classify MNIST samples
+
+To do(visualize2.py):
+	Clean the code: add variables, make it more readable, etc...
+	Display the weights and biases of the neurons
+
+
+Logs:
+
+May 18
+- number of layers and neurons in the network are adjustable
+- can now feedforward through the network
+
+May 19
+- implemented drawNetwork function in visualize2.py, code still needs cleaning
+
+May 23
+- tried adding backpropagation. guess what happened next.
+
+June 21
+- It's been almost a month since I got stuck, and sentdex hasn't posted another video on the series yet. I'll just leave this project for now and I might come back to it when I can implement backpropagation.
